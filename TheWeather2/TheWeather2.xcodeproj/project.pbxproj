@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107FF21121EF322B00B3F180 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107FF21021EF322B00B3F180 /* WebViewController.swift */; };
 		108FC53C21B7EE84009AAEBA /* crayon_1-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 108FC53B21B7EE83009AAEBA /* crayon_1-1.ttf */; };
 		108FC53E21B7F052009AAEBA /* setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 108FC53D21B7F052009AAEBA /* setofont.ttf */; };
 		108FC54021B7F3D2009AAEBA /* genkai-mincho.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 108FC53F21B7F3D1009AAEBA /* genkai-mincho.ttf */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		107FF21021EF322B00B3F180 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		108FC53B21B7EE83009AAEBA /* crayon_1-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "crayon_1-1.ttf"; sourceTree = "<group>"; };
 		108FC53D21B7F052009AAEBA /* setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = setofont.ttf; sourceTree = "<group>"; };
 		108FC53F21B7F3D1009AAEBA /* genkai-mincho.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "genkai-mincho.ttf"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				10A312DC21A3F96D0049CE54 /* AppDelegate.swift */,
 				10A312DE21A3F96D0049CE54 /* ViewController.swift */,
 				10A312EE21A3FC600049CE54 /* SecondPageVC.swift */,
+				107FF21021EF322B00B3F180 /* WebViewController.swift */,
 				108FC54121B7FA91009AAEBA /* UIView+O2CornerRadius.swift */,
 				10A312E021A3F96D0049CE54 /* Main.storyboard */,
 				10A312E321A3F9710049CE54 /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				108FC54221B7FA91009AAEBA /* UIView+O2CornerRadius.swift in Sources */,
 				10A312DF21A3F96D0049CE54 /* ViewController.swift in Sources */,
 				10A312DD21A3F96D0049CE54 /* AppDelegate.swift in Sources */,
+				107FF21121EF322B00B3F180 /* WebViewController.swift in Sources */,
 				10A312EF21A3FC600049CE54 /* SecondPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
