@@ -111,7 +111,6 @@ class SecondPageVC: UIViewController,LocationIntSend {
         session = URLSession(configuration: .default)
         let apiAddress = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0018-001?Authorization=CWB-956FEFAA-E994-407E-89C1-572414FDCA15&elementName=%E6%B0%A3%E6%BA%AB,%E6%B5%B7%E6%BA%AB,%E6%B5%AA%E9%AB%98&sort=obsTime"
         if let apiURL = URL(string: apiAddress){
-            print("url works")
             let task = session?.dataTask(with: apiURL, completionHandler: { (data, response, error) in
                 if error != nil{
                     //Unfinsh:Can change popalert
@@ -132,19 +131,17 @@ class SecondPageVC: UIViewController,LocationIntSend {
                 }
                 if let loadedData = data{
                     do{
-                        print("Have Data")
                         let OkData = try JSONDecoder().decode(AllData.self, from: loadedData)
                         
                         //抓出位置代號在陣列的所在位置
                         var index:Int = 0
                         //抓下全部的stationId存入locations陣列中
                         var locations = [String]()
-                        while index < OkData.records?.location?.count ?? 1{
+                        while index < 18{
                             locations.append((OkData.records?.location![index].stationId)!)
                             index += 1
                             //Notice that warning : index out of range
                         }
-                        print(locations)
                             //找出時間陣列裡，最後一個元素（已升冪排序）
                             if let locationIndex:Int = locations.index(of: location){
                                 if let timeCount:Int = (OkData.records?.location![locationIndex].time?.count){
@@ -278,14 +275,14 @@ class SecondPageVC: UIViewController,LocationIntSend {
                                     print("UVI Location: \(String(describing: OkUVIData.records?.location![locationIndex].locationName))")
                                     print("UVI： \(UVIValue)")
                                     
-                                    if UVIValueCheck == 0 {
+                                    if UVIValueCheck >= 0{
                                         DispatchQueue.main.async{
                                             self.UVILabel.text = String(UVIValue)
-                                            self.UVIMeansLabel.text = ""
                                         }
-                                    }else if UVIValueCheck > 0{
-                                        DispatchQueue.main.async{
-                                            self.UVILabel.text = String(UVIValue)
+                                        if UVIValueCheck == 0 {
+                                            DispatchQueue.main.async{
+                                                self.UVIMeansLabel.text = ""
+                                            }
                                         }
                                         if UVIValueCheck<=2 && UVIValueCheck>0 {
                                         DispatchQueue.main.async{
